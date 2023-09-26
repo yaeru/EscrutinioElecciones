@@ -1,0 +1,11 @@
+#ee-metabox-detalles .mb+.mb {
+	margin-top: 1rem;
+}
+#ee-metabox-detalles label {
+	width: 150px;
+	display: inline-block;
+}
+#ee-metabox-detalles input,
+#ee-metabox-detalles select {
+	width: 200px;
+}

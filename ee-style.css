@@ -1,0 +1,156 @@
+/*
+ * Plugin Name:		Escrutinio Elecciones
+ * Version:			0.2
+ * Author:			Yael Duckwen
+ * Author URI:		https://quierohacertuweb.com
+*/
+
+:root {
+	--ee-primary: #0071BC;
+	--ee-secondary: #005289;
+	--ee-tertiary: #02b2e3;
+}
+.ee-puesto-title {
+	text-align: center;
+}
+.ee-candidates-grid {
+	text-align: center;
+	display: grid;
+	gap: 1rem;
+}
+@media only screen and (min-width: 981px) {
+	.ee-candidates-grid {
+		grid-template-columns: repeat(3,1fr);
+	}
+}
+.ee-candidates-grid .card {
+	padding: 1rem;
+	border: solid 1px;
+	border-radius: 5px;
+}
+@media only screen and (max-width: 980px) {
+	.ee-candidates-grid .card {
+		padding: 0.7rem;
+		display: grid;
+		grid-template-columns: 70px 1fr 70px;
+		grid-gap: 10px;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+.candidato-cara img {
+	max-width: 70px;
+	height: auto;
+	border-radius: 100px;
+	border: solid 3px var(--ee-tertiary);
+	order: 1;
+}
+@media only screen and (min-width: 981px) {
+	.candidato-cara img {
+		max-width: 100px;
+	}
+}
+.candidato-votos {
+	font-size: 1.7rem;
+	font-weight: bold;
+	line-height: 1.1em;
+	text-align: right;
+	order: 3;
+}
+@media only screen and (min-width: 981px) {
+	.candidato-votos {
+		font-size: 3rem;
+		text-align: center;
+	}
+}
+@media only screen and (min-width: 981px) {
+	.candidato-votos {
+		font-size: 3rem;
+	}
+}
+.candidato-nombre {
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+@media only screen and (min-width: 981px) {
+	.candidato-nombre {
+		font-size: 1.5rem;
+	}
+}
+.candidato-partido {
+	font-size: 0.8rem;
+}
+@media only screen and (min-width: 981px) {
+	.candidato-partido {
+		font-size: 1rem;
+	}
+}
+
+@media only screen and (max-width: 980px) {
+	.candidato-cara {
+		order: 1;
+	}
+	.candidato-votos {
+		order: 3;
+	}
+	.candidato-data {
+		order: 2;
+	}
+}
+
+.ee-candidates-table {
+	width: 100%;
+	border-collapse: collapse;
+	text-transform: capitalize;
+}
+
+.ee-candidates-table th {
+	background-color: #f2f2f2;
+	text-align: left;
+	padding: 10px;
+}
+
+.ee-candidates-table tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+.ee-candidates-table tr:nth-child(odd) {
+	background-color: #ffffff;
+}
+
+.ee-candidates-table td {
+	padding: 10px;
+	border-bottom: 1px solid #ccc;
+}
+
+/* Feuentes */
+.ee-fuentes {
+	padding: 15px;
+	background-color: var(--ee-secondary);
+	color: #fff;
+	border-radius: 5px;
+}
+.ee-fuentes ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-align: center;
+}
+@media only screen and (min-width: 981px) {
+	.ee-fuentes ul {
+		display: flex;
+		justify-content: space-between;
+		gap: 10px;
+	}
+}
+
+/* RESET BOOTSTRAP */
+@media only screen and (max-width: 980px) {
+	#ee-nav-pills.nav {
+		flex-wrap: nowrap;
+	}
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+	background-color: var(--ee-tertiary) !important;
+}
